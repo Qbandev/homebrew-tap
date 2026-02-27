@@ -5,23 +5,23 @@
 class Kaddons < Formula
   desc "Kubernetes addon compatibility checker powered by Gemini AI"
   homepage "https://github.com/qbandev/kaddons"
-  version "0.2.2"
+  version "0.3.0"
   license "MIT"
 
   depends_on "kubernetes-cli"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Qbandev/kaddons/releases/download/v0.2.2/kaddons_0.2.2_darwin_amd64.tar.gz"
-      sha256 "d4830cc6b640fcac58e05354ee0e6a572d086d410de38a196fd83ce4a70d9cc6"
+      url "https://github.com/Qbandev/kaddons/releases/download/v0.3.0/kaddons_0.3.0_darwin_amd64.tar.gz"
+      sha256 "d0486abab8d2bb568dfbea2dfb05f7343cc386642caab6da9781753cb458d063"
 
       define_method(:install) do
         bin.install "kaddons"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Qbandev/kaddons/releases/download/v0.2.2/kaddons_0.2.2_darwin_arm64.tar.gz"
-      sha256 "b5848cceb5dd131407bb91745108a9d490a1600847a626d374314d7f1aba6485"
+      url "https://github.com/Qbandev/kaddons/releases/download/v0.3.0/kaddons_0.3.0_darwin_arm64.tar.gz"
+      sha256 "b02306c0c4cac4f99a2e794d06c96dac62f51860b028a76782b0f4f8140c7c2d"
 
       define_method(:install) do
         bin.install "kaddons"
@@ -31,15 +31,15 @@ class Kaddons < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Qbandev/kaddons/releases/download/v0.2.2/kaddons_0.2.2_linux_amd64.tar.gz"
-      sha256 "7be5877d3ec1185730b6d6f9c6fc498f2d26515577d013580ba09622ea84d1e3"
+      url "https://github.com/Qbandev/kaddons/releases/download/v0.3.0/kaddons_0.3.0_linux_amd64.tar.gz"
+      sha256 "52b80ec6cb25b5781529f13f8b3bf919e1b5e56cf3b2fa73f1db8cb38ee656ff"
       define_method(:install) do
         bin.install "kaddons"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Qbandev/kaddons/releases/download/v0.2.2/kaddons_0.2.2_linux_arm64.tar.gz"
-      sha256 "163507b13e87001aefebdf6a6498282612024637459f90234b1edd4924183482"
+      url "https://github.com/Qbandev/kaddons/releases/download/v0.3.0/kaddons_0.3.0_linux_arm64.tar.gz"
+      sha256 "9509e901742b2f15e962147a45b65afdde40a41fa5b4b71eb4b21f8c5d7f1049"
       define_method(:install) do
         bin.install "kaddons"
       end
